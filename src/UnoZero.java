@@ -10,11 +10,17 @@ public class UnoZero {
                 mxn[i][j]=in.nextInt();
             }
         }
-        ZeroUno(mxn);
+        mxn=ZeroUno(mxn);
+        for(int i=0; i<mxn.length;i++) {
+            for (int j = 0; j < mxn[0].length; j++) {
+                System.out.print(mxn[i][j]+"  ");
+            }
+            System.out.println();
+        }
     }
     private static int[][] ZeroUno(int[][]a){
-        for(int i=1;i<a.length;i++){
-            for(int j=0;j<a.length;j++){
+        for(int i=0;i<a.length;i++){
+            for(int j=1;j<a.length;j++){
                 a[i][j]=0;
             }
         }
